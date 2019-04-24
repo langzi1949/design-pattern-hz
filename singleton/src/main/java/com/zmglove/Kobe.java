@@ -1,5 +1,7 @@
 package com.zmglove;
 
+import cn.hutool.core.util.StrUtil;
+
 /**
  * TODO
  *
@@ -8,4 +10,10 @@ package com.zmglove;
  * @date 2019/4/24 18:45
  **/
 public class Kobe {
+
+    public String getSt(){
+        String temple = "{}-{}";
+
+        return StrUtil.format(temple,"Kobe","James");
+    }
 }
