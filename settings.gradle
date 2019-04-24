@@ -1,0 +1,8 @@
+rootProject.name = 'design-pattern-hz'
+
+include 'singleton'
+include 'simple-factory'
+include 'abstract-factory'
+
+
+
