@@ -18,5 +18,6 @@ public class SingleTest {
         DbConnection connection = DbConnection.getInstance();
         log.info(connection.toString());
         //System.out.println(connection.toString());
+        log.info(">>>> {}",connection.getStr());
     }
 }

@@ -1,5 +1,6 @@
 package com.zmglove;
 
+import cn.hutool.core.util.StrUtil;
 import lombok.Data;
 
 /**
@@ -17,5 +18,10 @@ public class DbConnection {
 
     public static DbConnection getInstance(){
         return instance;
+    }
+
+    public String getStr(){
+        String template = "{} - {}";
+        return StrUtil.format(template,"I","YOU");
     }
 }
