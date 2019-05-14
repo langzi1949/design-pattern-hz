@@ -1,2 +1,6 @@
 # design-pattern-hz
-Simple Desc :  I want to learn design patterns .....
+Simple Desc :  Learn design patterns .....
+
+#### Design Patterns Principle
+
+* SRP  ``
