@@ -15,6 +15,10 @@ public class SimpleSingleton {
      */
     private SimpleSingleton(){}
 
+    /**
+     * 静态方法，提供给外部进行实例化
+     * @return
+     */
     public static SimpleSingleton getInstance(){
         return INSTANCE;
     }
