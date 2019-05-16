@@ -15,9 +15,8 @@ public class SingleTest {
 
     @Test
     public void test(){
-        DbConnection connection = DbConnection.getInstance();
-        log.info(connection.toString());
+        SimpleSingleton simpleSingleton = SimpleSingleton.getInstance();
+        log.info(simpleSingleton.toString());
         //System.out.println(connection.toString());
-        log.info(">>>> {}",connection.getStr());
     }
 }
