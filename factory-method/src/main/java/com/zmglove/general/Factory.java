@@ -5,4 +5,7 @@ package com.zmglove.general;
  */
 public abstract  class Factory {
 
+    public Conveyance create(){
+        return null;
+    }
 }
