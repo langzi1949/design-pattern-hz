@@ -1,0 +1,38 @@
+buildscript {
+    ext {
+        nexusUri = 'http://112.65.233.109:8081'
+    }
+}
+allprojects {
+    repositories {
+        // 本地仓库
+        mavenLocal()
+        maven {
+            url "${nexusUri}/nexus/content/groups/public/"
+        }
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven'
+    apply plugin: 'idea'
+
+    group = 'com.zmglove'
+    version = '0.0.1-SNAPSHOT'
+
+//    sourceCompatibility = '1.8'
+//    targetCompatibility = 1.8
+
+    dependencies {
+        compile 'org.slf4j:slf4j-log4j12:1.7.25'
+        annotationProcessor 'org.projectlombok:lombok:1.18.2'
+        compile 'org.projectlombok:lombok:1.18.2'
+        compile 'com.google.guava:guava:23.0'
+        testAnnotationProcessor 'org.projectlombok:lombok:1.18.2'
+        testCompile 'org.projectlombok:lombok:1.18.2'
+        testCompile 'junit:junit:4.4'
+        testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.2'
+        testCompile 'org.junit.jupiter:junit-jupiter-engine:5.0.2'
+    }
+}
