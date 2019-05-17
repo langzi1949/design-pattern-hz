@@ -7,5 +7,9 @@ package com.zmglove;
  * @version 1.0
  * @date 2019/5/17 14:19
  **/
-public class DoubleSafeLazyTest {
+public class DoubleSafeLazyTest extends SingletonTest<DoubleSafeLazySingleton>{
+
+    public DoubleSafeLazyTest(){
+        super(DoubleSafeLazySingleton::getInstance);
+    }
 }
