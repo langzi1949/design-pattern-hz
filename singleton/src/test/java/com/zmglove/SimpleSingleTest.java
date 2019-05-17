@@ -3,6 +3,8 @@ package com.zmglove;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
+import java.util.function.Supplier;
+
 /**
  * langzi
  *
@@ -19,7 +21,13 @@ public class SimpleSingleTest extends SingletonTest<SimpleSingleton>{
 
     @Test
     @Override
-    public void multiCallReturnSameObjectInSameThreadTest(){
-        super.multiCallReturnSameObjectInSameThreadTest();
+    public void testMultiCallReturnSameObjectInSameThread(){
+        super.testMultiCallReturnSameObjectInSameThread();
+    }
+
+    @Test
+    @Override
+    public void testMultiCallReturnSameObjectInDiffThread(){
+        super.testMultiCallReturnSameObjectInDiffThread();
     }
 }
