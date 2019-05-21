@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        nexusUri = 'http://112.65.233.109:8081'
+        nexusUri = 'http://maven.hfjy.red:8081'
     }
 }
 allprojects {
