@@ -1,4 +1,5 @@
-import com.zmglove.SmartMethod;
+package com.zmglove;
+
 import org.junit.Test;
 
 /**
