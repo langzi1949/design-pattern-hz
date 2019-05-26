@@ -1,42 +1,16 @@
 package com.zmglove;
 
-import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
-
-import static org.mockito.Mockito.*;
-
 /**
  * 测试类
  */
-@Slf4j
-public class HitAndRunMethodTest {
-
-    @Test
-    public void testSteal() {
-        final StealingMethod stealingMethod = mock(StealingMethod.class);
-        final HalfingThief thief = new HalfingThief(stealingMethod);
-
-        thief.steal();
-        verify(stealingMethod).steal();
-
-        verifyNoMoreInteractions(stealingMethod);
-
-    }
-
-    @Test
-    public void testChangeMethod() {
-        final StealingMethod method = mock(StealingMethod.class);
-        final HalfingThief thief = new HalfingThief(method);
-
-        thief.steal();
-        verify(method).steal();
-
-        final StealingMethod newMethod = mock(StealingMethod.class);
-        thief.changeMethod(newMethod);
-
-        thief.steal();
-        verify(newMethod).steal();
-
-        verifyNoMoreInteractions(method,newMethod);
+public class HitAndRunMethodTest extends StealingMethodTest<HitAndRunMethod>{
+    public HitAndRunMethodTest() {
+        super(
+                new HitAndRunMethod(),
+                "一个洗剪吹的小伙子",
+                "目标[一个洗剪吹的小伙子]已经被盯上",
+                ">>>>从背后进行出其不意的袭击:一个洗剪吹的小伙子",
+                ">>>>最终偷走了一个口香糖，并快速撤离现场！！！"
+        );
     }
 }
