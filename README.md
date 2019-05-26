@@ -17,3 +17,21 @@ Simple Desc :  Learn design patterns .....
 **对修改关闭，对扩展开放**
 
 > 以上统称为 *SOLID*
+
+#### Gradle Dependencies
+
+```xml
+compile 'org.slf4j:slf4j-log4j12:1.7.25'
+compile 'org.slf4j:slf4j-api:1.7.25'
+compile 'ch.qos.logback:logback-classic:1.1.7'
+compile 'ch.qos.logback:logback-core:1.1.7'
+annotationProcessor 'org.projectlombok:lombok:1.18.2'
+compile 'org.projectlombok:lombok:1.18.2'
+compile 'com.google.guava:guava:23.0'
+testAnnotationProcessor 'org.projectlombok:lombok:1.18.2'
+testCompile 'org.projectlombok:lombok:1.18.2'
+testCompile 'junit:junit:4.4'
+testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.2'
+testCompile 'org.junit.jupiter:junit-jupiter-engine:5.0.2'
+testCompile 'org.mockito:mockito-core:1.10.19'
+```
