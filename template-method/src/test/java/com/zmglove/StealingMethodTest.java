@@ -3,16 +3,64 @@ package com.zmglove;
 import ch.qos.logback.classic.Logger;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.AppenderBase;
+import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.slf4j.LoggerFactory;
 
 import java.util.LinkedList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /**
  * 测试类
  */
 public class StealingMethodTest<M extends StealingMethod> {
-    private InMe
+    private InMemoryAppender appender;
+
+    public StealingMethodTest(M method, String expectedTarget, String expectedTargetResult, String expectedConfuseMethod, String expectedStealMethod) {
+        this.method = method;
+        this.expectedTarget = expectedTarget;
+        this.expectedTargetResult = expectedTargetResult;
+        this.expectedConfuseMethod = expectedConfuseMethod;
+        this.expectedStealMethod = expectedStealMethod;
+    }
+
+
+    @BeforeEach
+    public void setUp() {
+        appender = new InMemoryAppender();
+    }
+
+    @AfterEach
+    public void tearDown() {
+        appender.stop();
+    }
+
+    private final M method;
+
+    private final String expectedTarget;
+
+    private final String expectedTargetResult;
+
+    private final String expectedConfuseMethod;
+
+    private final String expectedStealMethod;
+
+
+    @Test
+    public void testPickTarget(){
+        assertEquals(expectedTarget,this.method.pickTarget());
+    }
+
+    @Test
+    public void testConfuseTarget(){
+        assertEquals(0,appender.getLogSize());
+
+        this.method.stealTheItem(this.expectedTarget);
+
+    }
 
 
     private class InMemoryAppender extends AppenderBase<ILoggingEvent> {
@@ -24,7 +72,19 @@ public class StealingMethodTest<M extends StealingMethod> {
 
         @Override
         protected void append(ILoggingEvent iLoggingEvent) {
-            loggingEvents.add(iLoggingEvent)
+            loggingEvents.add(iLoggingEvent);
+        }
+
+        public int getLogSize() {
+            return loggingEvents.size();
+        }
+
+        public String getLastMessage() {
+            return loggingEvents.get(loggingEvents.size() - 1).getFormattedMessage();
+        }
+
+        public boolean logContains(String message) {
+            return loggingEvents.stream().anyMatch(event -> event.getFormattedMessage().equals(message));
         }
 
     }
