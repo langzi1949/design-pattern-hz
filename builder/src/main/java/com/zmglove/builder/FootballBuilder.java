@@ -9,7 +9,7 @@ package com.zmglove.builder;
  **/
 public class FootballBuilder implements Builder{
 
-    private Football football;
+    private Football football = new Football();
     @Override
     public void setFootballName(String name) {
         football.setName(name);
@@ -30,6 +30,7 @@ public class FootballBuilder implements Builder{
         football.setOriginPlace("Shanghai");
     }
 
+    @Override
     public Football getFootball(){
         return this.football;
     }
