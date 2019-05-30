@@ -4,6 +4,9 @@ package com.zmglove.other;
  * 盔甲枚举
  */
 public enum Armor {
+    /**
+     *
+     */
     CLOTHES("clothes"),LEATHER("leather"),CHAIN_MAIL("chain mail"),PLATE_MAIL("plate mail");
     private String title;
 
@@ -13,8 +16,6 @@ public enum Armor {
 
     @Override
     public String toString() {
-        return "Armor{" +
-                "title='" + title + '\'' +
-                '}';
+        return title;
     }
 }
