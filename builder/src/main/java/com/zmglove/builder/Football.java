@@ -31,6 +31,8 @@ public class Football {
      */
     private String originPlace;
 
+    public Football(){}
+
     public Football(String name) {
         this.name = name;
     }

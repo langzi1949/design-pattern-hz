@@ -13,4 +13,6 @@ public interface Builder {
 
     void buildOriginPlace();
 
+    Football getFootball();
+
 }
