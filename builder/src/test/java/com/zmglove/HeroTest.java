@@ -37,8 +37,5 @@ public class HeroTest {
         assertNotNull(hero.toString());
         assertEquals(Profession.PRIEST,hero.getProfession());
         assertEquals(Weapon.DAGGER,hero.getWeapon());
-
-
-
     }
 }
