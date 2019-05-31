@@ -7,4 +7,5 @@ include 'factory-method'
 include 'facade'
 include 'template-method'
 include 'builder'
+include 'proxy'
 
