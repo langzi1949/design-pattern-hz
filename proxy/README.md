@@ -32,5 +32,27 @@
 动态代理生成的代理类是集成Proxy类的，并且会实现被你传入`newProxyInstance`方法的所有接口。<br/>
 所以我们可以将生成的代理强制转为任意一个代理的接口或者Proxy去使用。
 
+##### 动态代理源码分析-流程图
+
+![](etc/Proxy-source.png)
+
+##### Cglib动态代理
+
+```text
+CGLIB是一个强大的高性能的代码生成库。
+作为JDK动态代理的互补，它对于那些没有实现接口的类提供了代理方案。
+在底层，它使用ASM字节码操纵框架。本质上来说，CGLIB通过产生子类覆盖非final方法来进行代理。
+它比使用Java反射的JDK动态代理方法更快。
+CGLIB不能代理一个final类或者final方法。
+通常来说，你可以使用JDK动态代理方法来创建代理，对于没有接口的情况或者性能因素，CGLIB是一个很好的选择
+```
+
+##### 参考资料
+* [代理模式详解（包含原理详解）](https://www.cnblogs.com/zuoxiaolong/p/pattern3.html)
+* [CGLIB动态代理介绍](http://ifeve.com/cglib-desc/)
+* [Java代理模式](https://segmentfault.com/a/1190000011291179)
+* [Proxy源码分析](https://www.cnblogs.com/zhangchengzi/p/9713807.html)
+
+
   
  

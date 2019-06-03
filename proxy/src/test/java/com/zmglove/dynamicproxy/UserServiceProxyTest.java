@@ -1,5 +1,7 @@
 package com.zmglove.dynamicproxy;
 
+import com.zmglove.cglibproxy.CglibProxyFactory;
+import com.zmglove.cglibproxy.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -28,5 +30,17 @@ public class UserServiceProxyTest {
 
         IUserService userService = factory.getUserServiceProxy();
         log.info(userService.getUserName());
+    }
+
+    @Test
+    public void testCglibProxy(){
+        // 目标对象
+        UserService userService = new UserService();
+        // 代理对象
+        UserService proxy = (UserService)new CglibProxyFactory(userService).getProxyInstance();
+
+        // 执行代理对象方法
+        proxy.sayHello();
+
     }
 }
