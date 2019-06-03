@@ -48,6 +48,7 @@ CGLIB不能代理一个final类或者final方法。
 * [代理模式详解（包含原理详解）](https://www.cnblogs.com/zuoxiaolong/p/pattern3.html)
 * [CGLIB动态代理介绍](http://ifeve.com/cglib-desc/)
 * [Java代理模式](https://segmentfault.com/a/1190000011291179)
+* [Proxy源码分析](https://www.cnblogs.com/zhangchengzi/p/9713807.html)
 
 
   
