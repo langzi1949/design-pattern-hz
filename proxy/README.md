@@ -29,6 +29,25 @@
 ##### 动态代理
 > 动态代理有一个强制性要求，就是被代理的类必须实现某一个接口，或者就是接口本身。
 
+##### 动态代理源码分析-流程图
+
+![](etc/Proxy-source.png)
+
+##### Cglib动态代理
+
+```text
+CGLIB是一个强大的高性能的代码生成库。
+作为JDK动态代理的互补，它对于那些没有实现接口的类提供了代理方案。
+在底层，它使用ASM字节码操纵框架。本质上来说，CGLIB通过产生子类覆盖非final方法来进行代理。
+它比使用Java反射的JDK动态代理方法更快。
+CGLIB不能代理一个final类或者final方法。
+通常来说，你可以使用JDK动态代理方法来创建代理，对于没有接口的情况或者性能因素，CGLIB是一个很好的选择
+```
+
+##### 参考资料
+* [代理模式详解（包含原理详解）](https://www.cnblogs.com/zuoxiaolong/p/pattern3.html)
+* [CGLIB动态代理介绍](http://ifeve.com/cglib-desc/)
+* [Java代理模式](https://segmentfault.com/a/1190000011291179)
 
 
   
