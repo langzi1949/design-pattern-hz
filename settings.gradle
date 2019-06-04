@@ -9,4 +9,6 @@ include 'template-method'
 include 'builder'
 include 'proxy'
 include 'prototype'
+include 'adapter'
+include 'observer'
 
