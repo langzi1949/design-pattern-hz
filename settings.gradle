@@ -8,4 +8,5 @@ include 'facade'
 include 'template-method'
 include 'builder'
 include 'proxy'
+include 'prototype'
 
