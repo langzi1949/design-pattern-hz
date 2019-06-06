@@ -49,7 +49,7 @@ public class Reader implements Observer {
     public void update(Observable o, Object arg) {
         if (o instanceof Writer) {
             Writer writer = (Writer) o;
-            log.info(">>>>读者:[{}]知道作家[{}]发表了新书:{},打算近期跟进阅读", name, writer.getName(), writer.getLastNovel());
+            log.info(">>>>读者:[{}]知道了作家[{}]发表了新书:{},打算近期跟进阅读", name, writer.getName(), writer.getLastNovel());
         }
     }
 }
