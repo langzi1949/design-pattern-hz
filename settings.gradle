@@ -11,4 +11,5 @@ include 'proxy'
 include 'prototype'
 include 'adapter'
 include 'observer'
+include 'mediator'
 
