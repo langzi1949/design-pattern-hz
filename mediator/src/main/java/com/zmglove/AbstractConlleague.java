@@ -3,7 +3,7 @@ package com.zmglove;
 /**
  * 抽象同事类
  */
-public class AbstractConlleague {
+public abstract class AbstractConlleague {
     protected  AbstractMediator mediator;
 
 
