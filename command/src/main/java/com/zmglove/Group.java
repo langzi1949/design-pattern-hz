@@ -1,4 +1,12 @@
 package com.zmglove;
 
-public class Group {
+/**
+ * 抽象类
+ */
+public abstract class Group {
+    // find
+    public abstract void find();
+
+    // doSomething
+    public abstract void doSomething();
 }
