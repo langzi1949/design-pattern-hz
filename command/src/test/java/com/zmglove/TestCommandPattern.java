@@ -16,5 +16,10 @@ public class TestCommandPattern {
         // 执行命令
         kobe.action();
 
+        Command test = new TestCommand();
+        kobe = new Invoker(test);
+
+        kobe.action();
+
     }
 }
