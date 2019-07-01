@@ -22,4 +22,11 @@ public class TestCommandPattern {
         kobe.action();
 
     }
+
+    @Test
+    public void baTest(){
+        Command ba = new BaCommand();
+        Invoker james = new Invoker(ba);
+        james.action();
+    }
 }
