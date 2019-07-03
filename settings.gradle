@@ -13,4 +13,5 @@ include 'adapter'
 include 'observer'
 include 'mediator'
 include 'command'
+include 'iterator'
 
