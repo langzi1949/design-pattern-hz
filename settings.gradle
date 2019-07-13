@@ -14,4 +14,5 @@ include 'observer'
 include 'mediator'
 include 'command'
 include 'iterator'
+include 'composite'
 
