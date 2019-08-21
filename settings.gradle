@@ -16,4 +16,5 @@ include 'command'
 include 'iterator'
 include 'composite'
 include 'memento'
+include 'chain'
 
