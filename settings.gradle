@@ -17,4 +17,5 @@ include 'iterator'
 include 'composite'
 include 'memento'
 include 'chain'
+include 'decorator'
 
