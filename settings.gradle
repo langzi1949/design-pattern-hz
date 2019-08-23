@@ -18,4 +18,5 @@ include 'composite'
 include 'memento'
 include 'chain'
 include 'decorator'
+include 'strategy'
 
